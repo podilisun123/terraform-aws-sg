@@ -2,6 +2,7 @@ resource "aws_security_group" "allow_tls" {
   name        = local.sg_final_name
   description = var.sg_description
   vpc_id      = var.vpc_id
+
   dynamic "ingress" {
     for_each = var.ingress_rules
     content {
@@ -31,4 +32,4 @@ resource "aws_security_group" "allow_tls" {
         Name = local.sg_final_name
     }
   )
-  }
+}

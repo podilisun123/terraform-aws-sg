@@ -13,6 +13,9 @@ variable "vpc_id" {
 variable "sg_description" {
     type = string
 }
+variable "common_tags" {
+    type = map
+}
 variable "ingress_rules" {
     type = list 
     default = []
